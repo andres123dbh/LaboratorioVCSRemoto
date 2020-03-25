@@ -5,7 +5,7 @@
 #print("El producto es: ",a*c)
 #print("El doble del primer numero es: ",a*2)
 #print("El cuadrado del tercer numero es: ",b**2)
-#print("La raiz del cuarto numero es: ",d**(1/2))
+#print("La raiz del cuarto numero es: ",d*(1/2))
 a=float(input("Digite el a numero: "))
 b=float(input("Digitar el b numero: "))
 c=float(input("Digitar el c numero: "))
@@ -17,5 +17,5 @@ if d>0:
 elif d==0:
     print("x1 y x2 son iguales y corresponden a: ",-b/(2*a))
 elif d<0:
-    print("No existe solución a la ecuación cuadrática dentro del dominio de los números reales")
+    print("No existe solución de la ecuación cuadrática dentro del dominio de los números reales")
 
