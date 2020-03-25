@@ -14,5 +14,7 @@ if d>0:
     x1=(-b+(d**(1/2)))/(2*a)
     x2=(-b-(d**(1/2)))/(2*a)
     print("Tiene dos soluciones distantes las cuales son ",x1," y ",x2)
+elif d==0:
+    print("x1 y x2 son iguales y corresponden a: ",-b/(2*a))
 
 
