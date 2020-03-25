@@ -16,5 +16,6 @@ if d>0:
     print("Tiene dos soluciones distantes las cuales son ",x1," y ",x2)
 elif d==0:
     print("x1 y x2 son iguales y corresponden a: ",-b/(2*a))
-
+elif d<0:
+    print("No existe solución a la ecuación cuadrática dentro del dominio de los números reales")
 
