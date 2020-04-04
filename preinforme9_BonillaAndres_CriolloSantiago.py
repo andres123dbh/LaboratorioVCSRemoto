@@ -28,7 +28,7 @@ print(num2)'''
 
 #Ejercicio 3
 
-nota1=float(input("Digite la primer nota: "))
+'''nota1=float(input("Digite la primer nota: "))
 nota2=float(input("Digite la segunda nota: "))
 nota3=float(input("Digite la tercera nota: "))
 nota4=float(input("Digite la cuarta nota: "))
@@ -43,4 +43,15 @@ elif nota_final<3.0:
 elif nota_final>=3.0 and nota_final<=4.5:
     print("El estudiante aprobo")
 elif nota_final>4.5:
-    print("Felicitaciones querido estudiante")
+    print("Felicitaciones querido estudiante")'''
+
+#Ejercicio 4
+
+numero_fila=int(input("Digite el numero de filas"))
+secuencia=0
+mult=10
+for i in range(1,numero_fila+1):
+    secuencia=(secuencia*mult)+i
+    if i==9:
+        mult=100
+    print(secuencia)
