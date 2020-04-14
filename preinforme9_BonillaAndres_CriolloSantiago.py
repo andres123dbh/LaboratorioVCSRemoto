@@ -50,8 +50,10 @@ elif nota_final>4.5:
 numero_fila=int(input("Digite el numero de filas"))
 secuencia=0
 mult=10
+cambio=9
 for i in range(1,numero_fila+1):
     secuencia=(secuencia*mult)+i
-    if i==9:
-        mult=100
+    if i==cambio:
+        mult=mult*10
+        cambio=(cambio*10)+9
     print(secuencia)
