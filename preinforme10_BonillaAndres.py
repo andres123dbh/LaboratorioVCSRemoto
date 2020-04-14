@@ -33,6 +33,22 @@ def comparar(utilidad):
     print("- No intervienen todos los valores")
     print("- No puede definirse para variables cualitativas puras")
     print("Ventajas media:")
+    print("- Medida de tendencia mas usada")
+    print("- Utiliza todos los datos")
+    print("- Sensible a cualquier cambio en los datos")
     print("Desventajas media:")
+    print("- No recomendable para distribuciones muy asimetricas")
+    print("- No puede calcular para datos cualitativos")
 
-comparar(utilidad)
+def aporte_utilidad_acumulada(utilidad):
+    suma=np.sum(utilidad)
+    print(suma)
+    a=0
+    for i in range(0,10):
+        porcentaje=(utilidad[i]*100)/suma
+        a=a+porcentaje
+        print("En la pocicion ",i+1," aporta un ",porcentaje,"%")
+        print(a)
+
+
+aporte_utilidad_acumulada(utilidad)
