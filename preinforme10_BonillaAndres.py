@@ -46,9 +46,9 @@ def aporte_utilidad_acumulada(utilidad):
     a=0
     for i in range(0,10):
         porcentaje=(utilidad[i]*100)/suma
-        a=a+porcentaje
-        print("En la pocicion ",i+1," aporta un ",porcentaje,"%")
-        print(a)
+        print("En la pocicion ",i+1," aporta un ",porcentaje,"%"," en la utilidad operacional acumulada")
 
+def defisit_2017(utilidad):
+    print("El déficit en la utilidad operacional del año 2017 con respecto a la del año pasado: ",utilidad[8]-utilidad[9])
 
-aporte_utilidad_acumulada(utilidad)
+defisit_2017(utilidad)
