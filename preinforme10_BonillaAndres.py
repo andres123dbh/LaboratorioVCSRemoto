@@ -49,6 +49,18 @@ def aporte_utilidad_acumulada(utilidad):
         print("En la pocicion ",i+1," aporta un ",porcentaje,"%"," en la utilidad operacional acumulada")
 
 def defisit_2017(utilidad):
-    print("El déficit en la utilidad operacional del año 2017 con respecto a la del año pasado: ",utilidad[8]-utilidad[9])
+    print("El déficit en la utilidad operacional del año 2017 con respecto a la del año pasado: ",utilidad[8]-utilidad[9]," Millones COP")
 
-defisit_2017(utilidad)
+def defisit_cada_año(utilidad):
+    for i in range(0,10):
+        if i==9:
+            break
+        else:
+            defisit=utilidad[i+1]-utilidad[i]
+            porsentaje_defisit=(defisit*100)/utilidad[i]
+            if porsentaje_defisit>=0:
+                print("No hubo deficit por que no tuvieron perdidas el porsentaje de ganancia es: ",porsentaje_defisit)
+            else:
+                print("El deficit del año fue: ",(-1*porsentaje_defisit))
+
+defisit_cada_año(utilidad)
