@@ -18,6 +18,21 @@ def diferencia_mayor_menor(utilidad):
 def mediana(utilidad):
     print(np.sort(utilidad))
     print("La mediana de los datos es: ",np.median(utilidad))
-print("Esto significa que el 50 porciento de los datos estan debajo de este valor \n y el otro 50 porciento encima del valor")
+    print("Esto significa que el 50 por ciento de los datos estan debajo de este valor \n y el otro 50 por ciento encima del valor")
 
-mediana(utilidad)
+def comparar(utilidad):
+    print("Comparando la mediana es ",np.median(utilidad)," y la media es ",np.mean(utilidad))
+    print("La diferencia se debe a que la mediana solo tiene en cuenta los datos centrales a diferencia")
+    print("de la media que toma en cuenta todos los valores")
+    print("Ventajas mediana:")
+    print("- Facil de calcular")
+    print("- Interpretacion sencilla")
+    print("- Se puede calcular si se desconocen los valores extremos")
+    print("- Medida mas representativa de datos de escala ordinal")
+    print("Desventajas mediana:")
+    print("- No intervienen todos los valores")
+    print("- No puede definirse para variables cualitativas puras")
+    print("Ventajas media:")
+    print("Desventajas media:")
+
+comparar(utilidad)
