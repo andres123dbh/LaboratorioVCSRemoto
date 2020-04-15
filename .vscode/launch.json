@@ -5,13 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - App",
-            "request": "launch",
-            "mainClass": "java.preinforme10L_BonillaAndres.src.app.App",
-            "projectName": "LaboratorioVCS_75a8504e"
-        },
-        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",

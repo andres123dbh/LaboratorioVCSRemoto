@@ -9,7 +9,7 @@ def diferencia_promedio(utilidad):
     promedio_primeros_años=(utilidad[0]+utilidad[1])/2
     diferencia_promedio=promedio_ultimos_años-promedio_primeros_años
     print("La diferencia del promedio de los dos ultimos años respecto a los dos primeros es: ",diferencia_promedio)
-
+diferencia_promedio(utilidad)
 def diferencia_mayor_menor(utilidad):
     a=np.amin(utilidad)
     b=np.amax(utilidad)
@@ -46,10 +46,11 @@ def aporte_utilidad_acumulada(utilidad):
     a=0
     for i in range(0,10):
         porcentaje=(utilidad[i]*100)/suma
-        print("En la pocicion ",i+1," aporta un ",porcentaje,"%"," en la utilidad operacional acumulada")
+        print("En la posición ",i+1," aporta un ",porcentaje,"%"," en la utilidad operacional acumulada")
 
 def defisit_2017(utilidad):
     print("El déficit en la utilidad operacional del año 2017 con respecto a la del año pasado: ",utilidad[8]-utilidad[9]," Millones COP")
+
 
 def defisit_cada_año(utilidad):
     for i in range(0,10):
@@ -57,10 +58,9 @@ def defisit_cada_año(utilidad):
             break
         else:
             defisit=utilidad[i+1]-utilidad[i]
-            porsentaje_defisit=(defisit*100)/utilidad[i]
-            if porsentaje_defisit>=0:
-                print("No hubo deficit por que no tuvieron perdidas, el porsentaje de ganancia es: ",porsentaje_defisit)
+            porcentaje_defisit=(defisit*100)/utilidad[i]
+            if porcentaje_defisit>=0:
+                print("No hubo deficit por que no tuvieron perdidas, el porcentaje  de ganancia es: ",porcentaje_defisit)
             else:
-                print("El deficit del año fue: ",(-1*porsentaje_defisit))
+                print("El deficit del año fue: ",(-1*porcentaje_defisit))
 
-comparar(utilidad)
