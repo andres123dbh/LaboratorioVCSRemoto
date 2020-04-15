@@ -14,7 +14,7 @@ public class preinforme10L_BonillaAndres {
         utilidades[7]=17155;
         utilidades[8]=4614;
         utilidades[9]=834;
-        aporte_utilidad_acumulada(utilidades);
+        defisit_2017(utilidades);
     }
 
     public static void diferencia_promedio(int utilidades[]) {
@@ -93,5 +93,10 @@ public class preinforme10L_BonillaAndres {
             System.out.println("El porsentaje del "+utilidades[i]+" es "+porcentaje);
         }
 
+    }
+
+    public static void defisit_2017(int utilidades[]) {
+            int defisit = utilidades[8]-utilidades[9];
+            System.out.println("El déficit en la utilidad operacional del año 2017 con respecto a la del año pasado: "+defisit+" Millones COP");
     }
 }
