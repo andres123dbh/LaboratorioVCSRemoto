@@ -14,7 +14,7 @@ public class preinforme10L_BonillaAndres {
         utilidades[7]=17155;
         utilidades[8]=4614;
         utilidades[9]=834;
-        defisit_2017(utilidades);
+        defisit_cada_año(utilidades);
     }
 
     public static void diferencia_promedio(int utilidades[]) {
@@ -98,5 +98,23 @@ public class preinforme10L_BonillaAndres {
     public static void defisit_2017(int utilidades[]) {
             int defisit = utilidades[8]-utilidades[9];
             System.out.println("El déficit en la utilidad operacional del año 2017 con respecto a la del año pasado: "+defisit+" Millones COP");
+    }
+
+    public static void defisit_cada_año(int utilidades[]) {
+        for (int i=0;i<10;i++){
+            if (i==9){
+                break;
+            }
+            else{
+                float defisit=utilidades[i+1]-utilidades[i];
+                float porsentaje_defisit=(defisit*100)/utilidades[i];
+                if (porsentaje_defisit>=0){
+                    System.out.println("No hubo deficit por que no tuvieron perdidas, el porsentaje de ganancia es: "+porsentaje_defisit);
+                }
+                else{
+                    System.out.println("El deficit del año fue: "+(-1*porsentaje_defisit));
+                }
+            }
+        }   
     }
 }
