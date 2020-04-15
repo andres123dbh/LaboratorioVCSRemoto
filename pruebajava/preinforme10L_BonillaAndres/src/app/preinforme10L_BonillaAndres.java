@@ -1,4 +1,5 @@
 package app;
+import java.util.Arrays;
 
 public class preinforme10L_BonillaAndres {
     public static void main(final String[] args) {
@@ -13,7 +14,7 @@ public class preinforme10L_BonillaAndres {
         utilidades[7]=17155;
         utilidades[8]=4614;
         utilidades[9]=834;
-        diferencia_promedio(utilidades);
+        diferencia_mayor_menor(utilidades);
     }
 
     public static void diferencia_promedio(int utilidades[]) {
@@ -21,5 +22,13 @@ public class preinforme10L_BonillaAndres {
         int promedio_primeros_años=(utilidades[0]+utilidades[1])/2;
         int diferencia_promedio=promedio_ultimos_años-promedio_primeros_años;
         System.out.println("La diferencia del promedio de los dos ultimos años respecto a los dos primeros es: "+diferencia_promedio);
+    }
+
+    public static void diferencia_mayor_menor(int utilidades[]) {
+        Arrays.sort(utilidades);
+        int b=utilidades[0];
+        int a=utilidades[utilidades. length-1];
+        int c=a-b;
+        System.out.println("La diferencia del valor mayor y el valor menor es: "+c);
     }
 }
