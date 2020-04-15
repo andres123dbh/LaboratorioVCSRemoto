@@ -6,17 +6,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - App",
+            "name": "Debug (Launch) - Current File",
             "request": "launch",
-            "mainClass": "java.preinforme10L_BonillaAndres.src.app.App",
-            "projectName": "LaboratorioVCS_75a8504e"
+            "mainClass": "${file}"
         },
         {
-            "name": "Python: Current File",
-            "type": "python",
+            "type": "java",
+            "name": "Debug (Launch)-App<preinforme10L_BonillaAndres>",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "mainClass": "app.App",
+            "projectName": "preinforme10L_BonillaAndres"
         }
     ]
 }
