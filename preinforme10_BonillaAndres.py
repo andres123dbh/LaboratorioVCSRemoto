@@ -1,3 +1,18 @@
+    public static void mediana(int utilidades[]) {
+        Arrays.sort(utilidades);
+        float mediana = 0;
+        if (utilidades.length%2==0){
+            mediana =  (utilidades[utilidades.length/2+ utilidades[(utilidades.length/2)-1]] )/ 2;
+            System.out.println(utilidades.length%2);
+        }
+        else{
+            mediana = utilidades[(utilidades.length-1)/2];
+
+        }
+        System.out.println("La mediana de los datos es: " + mediana);
+        
+    }
+
 import numpy as np
 
 utilidad = np.array([27834 ,23789 ,30189 ,30967 ,32501 ,32701 ,31665 ,17155 , 4614 ,834])
