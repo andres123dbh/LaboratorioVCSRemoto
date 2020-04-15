@@ -14,7 +14,7 @@ public class preinforme10L_BonillaAndres {
         utilidades[7]=17155;
         utilidades[8]=4614;
         utilidades[9]=834;
-        mediana(utilidades);
+        comparar(utilidades);
     }
 
     public static void diferencia_promedio(int utilidades[]) {
@@ -38,12 +38,30 @@ public class preinforme10L_BonillaAndres {
         if (utilidades.length%2==0){
             mediana =  (utilidades[utilidades.length/2]+ utilidades[(utilidades.length/2)-1] )/ 2;
             System.out.println("La mediana de los datos es: " + mediana+".5");
+            System.out.println("Esto significa que el 50 por ciento de los datos estan debajo de este valor \n y el otro 50 por ciento encima del valor");
         }
         else{
             mediana = utilidades[(utilidades.length-1)/2];
             System.out.println("La mediana de los datos es: " + mediana);
+            System.out.println("Esto significa que el 50 por ciento de los datos estan debajo de este valor \n y el otro 50 por ciento encima del valor");
         }
         
         
+    }
+
+    public static void comparar(int utilidades[]) {
+        Arrays.sort(utilidades);
+        int mediana = 0;
+        if (utilidades.length%2==0){
+            mediana =  (utilidades[utilidades.length/2]+ utilidades[(utilidades.length/2)-1] )/ 2;
+        }
+        else{
+            mediana = utilidades[(utilidades.length-1)/2];
+        }
+        float suma = 0;
+        for (int i=0;i<utilidades.length;i++){
+            suma=suma+utilidades[i];
+        }
+        System.out.println("La media es: "+suma/utilidades.length+", la mediana de los datos es: " + mediana+".5");
     }
 }
