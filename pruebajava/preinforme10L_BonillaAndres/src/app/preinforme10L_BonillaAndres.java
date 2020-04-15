@@ -14,7 +14,7 @@ public class preinforme10L_BonillaAndres {
         utilidades[7]=17155;
         utilidades[8]=4614;
         utilidades[9]=834;
-        comparar(utilidades);
+        aporte_utilidad_acumulada(utilidades);
     }
 
     public static void diferencia_promedio(int utilidades[]) {
@@ -62,6 +62,36 @@ public class preinforme10L_BonillaAndres {
         for (int i=0;i<utilidades.length;i++){
             suma=suma+utilidades[i];
         }
-        System.out.println("La media es: "+suma/utilidades.length+", la mediana de los datos es: " + mediana+".5");
+        System.out.println("La media es "+suma/utilidades.length+", la mediana de los datos es " + mediana+".5");
+        System.out.println("La diferencia se debe a que la mediana solo tiene en cuenta los datos centrales a diferencia");
+        System.out.println("de la media que toma en cuenta todos los valores");
+        System.out.println("Ventajas mediana:");
+        System.out.println("- Facil de calcular");
+        System.out.println("- Interpretacion sencilla");
+        System.out.println("- Se puede calcular si se desconocen los valores extremos");
+        System.out.println("- Medida mas representativa de datos de escala ordinal");
+        System.out.println("Desventajas mediana:");
+        System.out.println("- No intervienen todos los valores");
+        System.out.println("- No puede definirse para variables cualitativas puras");
+        System.out.println("Ventajas media:");
+        System.out.println("- Medida de tendencia mas usada");
+        System.out.println("- Utiliza todos los datos");
+        System.out.println("- Sensible a cualquier cambio en los datos");
+        System.out.println("Desventajas media:");
+        System.out.println("- No recomendable para distribuciones muy asimetricas");
+        System.out.println("- No puede calcular para datos cualitativos");
+    }
+
+    public static void aporte_utilidad_acumulada(int utilidades[]) {
+        float suma = 0;
+        for (int i=0;i<utilidades.length;i++){
+            suma=suma+utilidades[i];
+        }
+        System.out.println(suma);
+        for (int i=0;i<10;i++){
+            float porcentaje=(utilidades[i]*100)/suma;
+            System.out.println("El porsentaje del "+utilidades[i]+" es "+porcentaje);
+        }
+
     }
 }
