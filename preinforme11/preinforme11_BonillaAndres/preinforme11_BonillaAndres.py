@@ -47,4 +47,7 @@ def promedio_valoracion(videojuegos):
     
     print("El promedio de la valoracion de todos los juegos de PS4 es",videojuegos[1, :].mean())
 
-promedio_valoracion(videojuegos)
+def comparar(videojuegos,nombres_videojuegos):
+    print("El",int(videojuegos[0,0]),"del ranking es",nombres_videojuegos[0],"tiene una valoracion de",videojuegos[1,0],"y tiene un precio de",videojuegos[2,0],"dolares")
+    print("El",int(videojuegos[0,24]),"del ranking es",nombres_videojuegos[24],"tiene una valoracion de",videojuegos[1,24],"y tiene un precio de",videojuegos[2,24],"dolares")
+comparar(videojuegos,nombres_videojuegos)
