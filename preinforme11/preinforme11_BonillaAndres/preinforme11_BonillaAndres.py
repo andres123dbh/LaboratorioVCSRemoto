@@ -33,11 +33,14 @@ def mayor_valoracion(videojuegos):
     return organizados[24]
     
 
-mayor = float(mayor_valoracion(videojuegos))
-menor = float(menor_valoracion(videojuegos))
-
 def buscar_nombre_valoracion(menor,mayor,nombres_videojuegos):
     print("El juego con mayor valoracion es ",nombres_videojuegos[1],"con",mayor)
     print("El juego con menor valoracion es ",nombres_videojuegos[21],"con",menor)
 
-buscar_nombre_valoracion(menor,mayor,nombres_videojuegos)
+mayor = float(mayor_precio(videojuegos))
+menor = float(menor_precio(videojuegos))
+
+def diferencia_precio(menor,mayor):
+    print("La diferencia de preciio entre el mas costos y el mas economico de los juegos es",mayor-menor)
+
+diferencia_precio(menor,mayor)
