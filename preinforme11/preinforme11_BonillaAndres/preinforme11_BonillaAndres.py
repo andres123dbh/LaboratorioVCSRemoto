@@ -41,6 +41,10 @@ mayor = float(mayor_precio(videojuegos))
 menor = float(menor_precio(videojuegos))
 
 def diferencia_precio(menor,mayor):
-    print("La diferencia de preciio entre el mas costos y el mas economico de los juegos es",mayor-menor)
+    print("La diferencia de precio entre el mas costoso y el mas economico de los juegos es",mayor-menor)
 
-diferencia_precio(menor,mayor)
+def promedio_valoracion(videojuegos):
+    
+    print("El promedio de la valoracion de todos los juegos de PS4 es",videojuegos[1, :].mean())
+
+promedio_valoracion(videojuegos)
