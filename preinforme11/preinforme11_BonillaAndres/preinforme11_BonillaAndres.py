@@ -20,11 +20,24 @@ def mayor_precio(videojuegos):
     return organizados[24]
     
 
-mayor = int(mayor_precio(videojuegos))
-menor = int(menor_precio(videojuegos))
-
 def buscar_nombre(menor,mayor,nombres_videojuegos):
     print("El juego con mayor precio es ",nombres_videojuegos[10],"que cuesta",mayor)
     print("El juego con menor precio es ",nombres_videojuegos[9],"que cuesta",menor)
 
-buscar_nombre(menor,mayor,nombres_videojuegos)
+def menor_valoracion(videojuegos):
+    organizados=np.sort(videojuegos[1, :])
+    return organizados[0]
+
+def mayor_valoracion(videojuegos):
+    organizados=np.sort(videojuegos[1, :])
+    return organizados[24]
+    
+
+mayor = float(mayor_valoracion(videojuegos))
+menor = float(menor_valoracion(videojuegos))
+
+def buscar_nombre_valoracion(menor,mayor,nombres_videojuegos):
+    print("El juego con mayor valoracion es ",nombres_videojuegos[1],"con",mayor)
+    print("El juego con menor valoracion es ",nombres_videojuegos[21],"con",menor)
+
+buscar_nombre_valoracion(menor,mayor,nombres_videojuegos)
