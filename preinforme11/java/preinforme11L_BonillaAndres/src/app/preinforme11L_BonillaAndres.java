@@ -9,9 +9,7 @@ public class preinforme11L_BonillaAndres {
         {9,9.5,8.5,8,7.5,7.5,9,9,9,8.5,8,7,7,8,8.5,7.5,9,8.5,8.5,9,8.5,6.5,9,9,8},
         {60,60,20,60,60,40,60,60,60,0,78,60,30,60,60,60,60,60,60,50,40,60,40,60,50}};
 
-        double mayor = mayor_precio(videojuegos);
-        double menor = menor_precio(videojuegos);
-        diferencia_precio(menor,mayor);
+        promedio_valoracion(videojuegos);
         
     }
 
@@ -78,7 +76,16 @@ public class preinforme11L_BonillaAndres {
     }
 
     public static void diferencia_precio(double menor,double mayor){
-        System.out.println("La diferencia de precio entre el mas costoso y el mas economico de los juegos es"+ (mayor-menor));
+        System.out.println("La diferencia de precio entre el mas costoso y el mas economico de los juegos es "+ (mayor-menor));
+    }
+
+    public static void promedio_valoracion(double videojuegos[][]){
+        double suma = 0;
+        for(int i=0;i<25;i++){
+            suma = suma + (videojuegos[1][i]);
+        }
+        double promedio = suma/25;
+        System.out.println("El promedio de las valoraciones de los juegos es "+promedio+" dolares");
     }
 
 }
