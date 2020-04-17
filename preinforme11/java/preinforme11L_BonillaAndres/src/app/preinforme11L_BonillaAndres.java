@@ -11,7 +11,7 @@ public class preinforme11L_BonillaAndres {
 
         double mayor = mayor_precio(videojuegos);
         double menor = menor_precio(videojuegos);
-        System.out.println("El juego con mayor precio es " + nombre_videojuegos[10] + " que cuesta " + mayor);
+        System.out.println("El juego con mayor precio es " + nombre_videojuegos[10] + " que cuesta" + mayor);
         System.out.println("El juego con menor precio es " + nombre_videojuegos[9] + " que cuesta " + menor);
     }
 
@@ -31,7 +31,7 @@ public class preinforme11L_BonillaAndres {
             if (i == 0){
                 mayor = videojuegos[2][i];
             }
-            if (videojuegos[2][i]<mayor){
+            if (videojuegos[2][i]>mayor){
                 mayor = videojuegos[2][i];
             }
         }
@@ -44,12 +44,37 @@ public class preinforme11L_BonillaAndres {
             if (i == 0){
                 menor = videojuegos[2][i];
             }
-            if (videojuegos[2][i]>menor){
+            if (videojuegos[2][i]<menor){
                 menor = videojuegos[2][i];
             }
         }
         return menor;
     }
 
+    public static double mayor_valoracion(double videojuegos[][]){
+        double mayor = 0;
+        for(int i=0;i<25;i++){
+            if (i == 0){
+                mayor = videojuegos[1][i];
+            }
+            if (videojuegos[1][i]>mayor){
+                mayor = videojuegos[1][i];
+            }
+        }
+        return mayor;
+    }
+
+    public static double menor_valoracion(double videojuegos[][]){
+        double menor = 0;
+        for(int i=0;i<25;i++){
+            if (i == 0){
+                menor = videojuegos[1][i];
+            }
+            if (videojuegos[1][i]<menor){
+                menor = videojuegos[1][i];
+            }
+        }
+        return menor;
+    }
 
 }
