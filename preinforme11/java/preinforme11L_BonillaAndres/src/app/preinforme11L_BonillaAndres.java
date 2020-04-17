@@ -11,8 +11,8 @@ public class preinforme11L_BonillaAndres {
 
         double mayor = mayor_precio(videojuegos);
         double menor = menor_precio(videojuegos);
-        System.out.println("El juego con mayor precio es " + nombre_videojuegos[10] + " que cuesta" + mayor);
-        System.out.println("El juego con menor precio es " + nombre_videojuegos[9] + " que cuesta " + menor);
+        diferencia_precio(menor,mayor);
+        
     }
 
     public static void promedio_precio(double videojuegos[][]){
@@ -75,6 +75,10 @@ public class preinforme11L_BonillaAndres {
             }
         }
         return menor;
+    }
+
+    public static void diferencia_precio(double menor,double mayor){
+        System.out.println("La diferencia de precio entre el mas costoso y el mas economico de los juegos es"+ (mayor-menor));
     }
 
 }
