@@ -9,7 +9,7 @@ public class preinforme11L_BonillaAndres {
         {9,9.5,8.5,8,7.5,7.5,9,9,9,8.5,8,7,7,8,8.5,7.5,9,8.5,8.5,9,8.5,6.5,9,9,8},
         {60,60,20,60,60,40,60,60,60,0,78,60,30,60,60,60,60,60,60,50,40,60,40,60,50}};
 
-        comparar(videojuegos,nombre_videojuegos);
+        todos(videojuegos,nombre_videojuegos);
         
     }
 
@@ -91,6 +91,12 @@ public class preinforme11L_BonillaAndres {
     public static void comparar(double videojuegos[][],String nombres_videojuegos[]){
         System.out.println("El "+videojuegos[0][0]+" del ranking es "+nombres_videojuegos[0]+"tiene una valoracion de "+ videojuegos[1][0]+" y tiene un precio de "+videojuegos[2][0] +" dolares");
         System.out.println("El "+videojuegos[0][24]+" del ranking es "+nombres_videojuegos[24]+"tiene una valoracion de "+ videojuegos[1][24]+" y tiene un precio de "+videojuegos[2][24] +" dolares");
+    }
+
+    public static void todos(double videojuegos[][],String nombres_videojuegos[]){
+        for(int i=0;i<25;i++){
+            System.out.println("El "+videojuegos[0][i]+" del ranking es "+nombres_videojuegos[i]+" tiene una valoracion de "+ videojuegos[1][i]+" y tiene un precio de "+videojuegos[2][i] +" dolares");
+        }
     }
 
 }
