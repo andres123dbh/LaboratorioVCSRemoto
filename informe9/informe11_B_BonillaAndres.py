@@ -32,11 +32,9 @@ personaje_1 = random.randint(0,2)
 personaje_2 = random.randint(0,2)
 personaje_3 = random.randint(0,2)
 
-nombre_clase_1 = nombre_clase(clase_1)
-
 if clase_1 == 0 or clase_1 == 4 or clase_1 == 6 or clase_1 == 7:
     for i in range (0,3):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]<16:
+        if clases_personaje_caracteristica[clase_1,personaje_1,i]<15:
             clases_personaje_caracteristica[clase_1,personaje_1,i] = clases_personaje_caracteristica[clase_1,personaje_1,i] + 2
     for i in range (3,6):
         if clases_personaje_caracteristica[clase_1,personaje_1,i]>14:
@@ -44,24 +42,24 @@ if clase_1 == 0 or clase_1 == 4 or clase_1 == 6 or clase_1 == 7:
 
 if clase_2 == 0 or clase_2 == 4 or clase_2 == 6 or clase_2 == 7:
     for i in range (0,3):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]<16:
+        if clases_personaje_caracteristica[clase_2,personaje_2,i]<15:
             clases_personaje_caracteristica[clase_2,personaje_2,i] = clases_personaje_caracteristica[clase_2,personaje_2,i] + 2
     for i in range (3,6):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]>14:
+        if clases_personaje_caracteristica[clase_2,personaje_2,i]>14:
             clases_personaje_caracteristica[clase_2,personaje_2,i] = clases_personaje_caracteristica[clase_2,personaje_2,i] - 3
 
 if clase_3 == 0 or clase_3 == 4 or clase_3 == 6 or clase_3 == 7:
     for i in range (0,3):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]<16:
+        if clases_personaje_caracteristica[clase_3,personaje_3,i]<15:
             clases_personaje_caracteristica[clase_3,personaje_3,i] = clases_personaje_caracteristica[clase_3,personaje_3,i] + 2
     for i in range (3,6):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]>14:
+        if clases_personaje_caracteristica[clase_3,personaje_3,i]>14:
             clases_personaje_caracteristica[clase_3,personaje_3,i] = clases_personaje_caracteristica[clase_3,personaje_3,i] - 3
     
 
 if clase_1 == 1 or clase_1 == 2 or clase_1 == 3 or clase_1 == 5:
     for i in range (3,6):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]<16:
+        if clases_personaje_caracteristica[clase_1,personaje_1,i]<15:
             clases_personaje_caracteristica[clase_1,personaje_1,i] = clases_personaje_caracteristica[clase_1,personaje_1,i] + 2
     for i in range (0,3):
         if clases_personaje_caracteristica[clase_1,personaje_1,i]>14:
@@ -69,26 +67,28 @@ if clase_1 == 1 or clase_1 == 2 or clase_1 == 3 or clase_1 == 5:
 
 if clase_2 == 1 or clase_2 == 2 or clase_2 == 3 or clase_2 == 5:
     for i in range (3,6):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]<16:
+        if clases_personaje_caracteristica[clase_2,personaje_2,i]<15:
             clases_personaje_caracteristica[clase_2,personaje_2,i] = clases_personaje_caracteristica[clase_2,personaje_2,i] + 2
     for i in range (0,3):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]>14:
+        if clases_personaje_caracteristica[clase_2,personaje_2,i]>14:
             clases_personaje_caracteristica[clase_2,personaje_2,i] = clases_personaje_caracteristica[clase_2,personaje_2,i] - 3
 
 if clase_3 == 1 or clase_3 == 2 or clase_3 == 3 or clase_3 == 5:
     for i in range (3,6):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]<16:
+        if clases_personaje_caracteristica[clase_3,personaje_3,i]<15:
             clases_personaje_caracteristica[clase_3,personaje_3,i] = clases_personaje_caracteristica[clase_3,personaje_3,i] + 2
     for i in range (0,3):
-        if clases_personaje_caracteristica[clase_1,personaje_1,i]>14:
+        if clases_personaje_caracteristica[clase_3,personaje_3,i]>14:
             clases_personaje_caracteristica[clase_3,personaje_3,i] = clases_personaje_caracteristica[clase_3,personaje_3,i] - 3
+
+nombre_clase_1 = nombre_clase(clase_1)
     
 print("El primer personaje es un ",nombre_clase_1," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_1,personaje_1,:])
 
 nombre_clase_2 = nombre_clase(clase_2)
 
-print("El primer personaje es un ",nombre_clase_2," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_2,personaje_2,:])
+print("El Segundo personaje es un ",nombre_clase_2," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_2,personaje_2,:])
 
 nombre_clase_3 = nombre_clase(clase_3)
 
-print("El primer personaje es un ",nombre_clase_3," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_3,personaje_3,:])
+print("El Tercero personaje es un ",nombre_clase_3," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_3,personaje_3,:])
