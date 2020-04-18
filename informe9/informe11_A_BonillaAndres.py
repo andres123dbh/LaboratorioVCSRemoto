@@ -121,25 +121,13 @@ def mejor_mes(ganancias):
 desde_mes = int(input("Digite desde que mes se mostrara: "))
 hasta_mes = int(input("Digite hasta que mes se mostrara: "))
 def imprimir_personalizado(arreglo,desde_mes,hasta_mes):
-    contador = 0
-    for i in range(desde_mes-1,hasta_mes):
-        contador = contador + 1
-    arreglo_2 = np.random.randint(1,3, size=contador*4).reshape(4,contador)
-    for i in range(desde_mes-1,hasta_mes):
-        arreglo_2[0,i-hasta_mes] = arreglo[0,i]
-        arreglo_2[1,i-hasta_mes] = arreglo[1,i]
-        arreglo_2[2,i-hasta_mes] = arreglo[2,i]
-        arreglo_2[3,i-hasta_mes] = arreglo[3,i]
-    data = pd.DataFrame([])
-    indices=["Bucaramanga","Floridablanca","Girón","Piedecuesta"]
     meses = np.array(["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"])
     print("             ",meses[desde_mes-1:hasta_mes])
-    print("Bucaramanga  ",arreglo_2[0,:])
-    print("Floridablanca",arreglo_2[1,:])
-    print("Girón        ",arreglo_2[2,:])
-    print("Piedecuesta  ",arreglo_2[3,:])
+    print("Bucaramanga  ",arreglo[0,desde_mes-1:hasta_mes])
+    print("Floridablanca",arreglo[1,desde_mes-1:hasta_mes])
+    print("Girón        ",arreglo[2,desde_mes-1:hasta_mes])
+    print("Piedecuesta  ",arreglo[3,desde_mes-1:hasta_mes])
     print(arreglo)
-    print(arreglo_2)
 
 
 
