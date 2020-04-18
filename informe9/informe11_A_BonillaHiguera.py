@@ -25,13 +25,16 @@ def imprimir(arreglo):
     print(df.head())
 
 def calculador(arreglo_1,arreglo_2):
-    arreglo_3 = np.random.randint(1,3, size=48).reshape(4,12)
+    ganancias = np.random.randint(1,3, size=48).reshape(4,12)
     for i in range(0,4):
         for n in range(0,12):
-            arreglo_3[i,n] = arreglo_1[i,n] -  arreglo_2[i,n] 
-    return arreglo_3
+            ganancias[i,n] = arreglo_1[i,n] -  arreglo_2[i,n] 
+    return ganancias
 
-arreglo_3=calculador(ingresos,egresos)
-print(arreglo_3)
-print(ingresos)
-print(egresos)
+ganancias=calculador(ingresos,egresos)
+print("Las ganancias o perdidas son:")
+imprimir(ganancias)
+print("Los ingresos son:")
+imprimir(ingresos)
+print("Los egresos son:")
+imprimir(egresos)
