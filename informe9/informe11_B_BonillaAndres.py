@@ -7,35 +7,31 @@ clases_personaje_caracteristica  = np.random.randint(10,19, size=[8,3,6])
 def nombre_clase(clase):
     if clase == 0:
         nombre_clase = "Bárbaro"
-    elif clase == 1:
+    if clase == 1:
         nombre_clase = "Bardo"
-    elif clase == 2:
+    if clase == 2:
         nombre_clase = "Clérigo"
-    elif clase == 3:
+    if clase == 3:
         nombre_clase = "Druida"
-    elif clase == 4:
+    if clase == 4:
         nombre_clase = "Guerrero"
-    elif clase == 5:
+    if clase == 5:
         nombre_clase = "Mago"
-    elif clase == 6:
+    if clase == 6:
         nombre_clase = "Paladin"
-    elif clase == 7:
+    if clase == 7:
         nombre_clase = "Pícaro"
     return nombre_clase
 
-clase_1 = random.randint(0,8)
-clase_2 = random.randint(0,8)
-clase_3 = random.randint(0,8)
+clase_1 = random.randint(0,7)
+clase_2 = random.randint(0,7)
+clase_3 = random.randint(0,7)
 
-personaje_1 = random.randint(0,3)
-personaje_2 = random.randint(0,3)
-personaje_3 = random.randint(0,3)
-
-print(clase_2)
+personaje_1 = random.randint(0,2)
+personaje_2 = random.randint(0,2)
+personaje_3 = random.randint(0,2)
 
 nombre_clase_1 = nombre_clase(clase_1)
-
-print(clases_personaje_caracteristica)
 
 print("El primer personaje es un ",nombre_clase_1," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_1,personaje_1,:])
 
