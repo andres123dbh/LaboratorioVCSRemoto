@@ -82,13 +82,18 @@ if clase_3 == 1 or clase_3 == 2 or clase_3 == 3 or clase_3 == 5:
             clases_personaje_caracteristica[clase_3,personaje_3,i] = clases_personaje_caracteristica[clase_3,personaje_3,i] - 3
 
 nombre_clase_1 = nombre_clase(clase_1)
-    
-print("El primer personaje es un ",nombre_clase_1," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_1,personaje_1,:])
+nombre = input("Digite el nombre del personaje: ")
 
-nombre_clase_2 = nombre_clase(clase_2)
+def imprimir(clases_personaje_caracteristica,nombre):
+    indices=[nombre]
+    df = pd.DataFrame({"Fuerza":clases_personaje_caracteristica[clase_1,personaje_1,0],
+    "Destreza":clases_personaje_caracteristica[clase_1,personaje_1,1],
+    "Constitución":clases_personaje_caracteristica[clase_1,personaje_1,2],
+    "Inteligencia":clases_personaje_caracteristica[clase_1,personaje_1,3],
+    "Sabiduría":clases_personaje_caracteristica[clase_1,personaje_1,4],
+    "Carisma":clases_personaje_caracteristica[clase_1,personaje_1,5]},index = indices)
+    print(df.head())
 
-print("El Segundo personaje es un ",nombre_clase_2," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_2,personaje_2,:])
+print("El personaje ",nombre," es un ",nombre_clase_1," y sus caracteristicas son: ")
 
-nombre_clase_3 = nombre_clase(clase_3)
-
-print("El Tercero personaje es un ",nombre_clase_3," y sus caracteristicas son: ",clases_personaje_caracteristica[clase_3,personaje_3,:])
+imprimir(clases_personaje_caracteristica,nombre)
