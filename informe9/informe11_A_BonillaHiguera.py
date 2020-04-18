@@ -57,4 +57,28 @@ def mejor_ciudad(ganancias):
     print(suma_pidecuesta)
     print(ganancias)
 
-mejor_ciudad(ganancias)
+def peor_ciudad(ganancias):
+    suma_bucaramanga = 0
+    suma_floridablanca = 0
+    suma_giron = 0
+    suma_pidecuesta = 0
+    for i in range(0,12):
+        suma_bucaramanga = suma_bucaramanga + ganancias[0,i]
+        suma_floridablanca = suma_floridablanca + ganancias[1,i]
+        suma_giron = suma_giron + ganancias[2,i]
+        suma_pidecuesta = suma_pidecuesta + ganancias[3,i]
+    if suma_bucaramanga<suma_floridablanca and suma_bucaramanga<suma_giron and suma_bucaramanga<suma_pidecuesta:
+        print("La ciudad con menores ganancias es Bucaramanga con ganancias de: ",suma_bucaramanga)
+    elif suma_floridablanca<suma_bucaramanga and suma_floridablanca<suma_giron and suma_floridablanca<suma_pidecuesta:
+        print("La ciudad con menores ganancias es Floridablanca con ganancias de: ",suma_floridablanca)
+    elif suma_giron<suma_bucaramanga and suma_giron<suma_floridablanca and suma_giron<suma_pidecuesta:
+        print("La ciudad con menores ganancias es Giron con ganancias de: ",suma_giron)
+    elif suma_pidecuesta<suma_bucaramanga and suma_pidecuesta<suma_floridablanca and suma_pidecuesta<suma_giron:
+        print("La ciudad con menores ganancias es Pidecuesta con ganancias de: ",suma_pidecuesta)
+    print(suma_bucaramanga)
+    print(suma_floridablanca)
+    print(suma_giron)
+    print(suma_pidecuesta)
+    print(ganancias)
+
+peor_ciudad(ganancias)
