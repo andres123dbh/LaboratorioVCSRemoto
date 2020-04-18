@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 def generador(v_minimo,v_maximo):
     generado = np.random.randint(v_minimo,v_maximo+1, size=48).reshape(4,12)
@@ -7,5 +8,22 @@ def generador(v_minimo,v_maximo):
 ingresos = generador(100,180)
 egresos = generador(60,130)
 
-print("Ingresos: ",ingresos)
-print("Egresos: ",egresos)
+def imprimir(arreglo):
+    indices=["Bucaramanga","Floridablanca","Girón","Piedecuesta"]
+    df = pd.DataFrame({"Enero":arreglo[:,0],
+    "Febrero":arreglo[:,1],
+    "Marzo":arreglo[:,2],
+    "Abril":arreglo[:,3],
+    "Mayo":arreglo[:,4],
+    "Junio":arreglo[:,5],
+    "Julio":arreglo[:,6],
+    "Agosto":arreglo[:,7],
+    "Septiembre":arreglo[:,8],
+    "Octubre":arreglo[:,9],
+    "Noviembre":arreglo[:,9],
+    "Diciembre":arreglo[:,9]},index = indices)
+    print(df.head())
+
+
+print(egresos)
+imprimir(egresos)
