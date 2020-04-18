@@ -20,10 +20,12 @@ def imprimir(arreglo):
     "Agosto":arreglo[:,7],
     "Septiembre":arreglo[:,8],
     "Octubre":arreglo[:,9],
-    "Noviembre":arreglo[:,9],
-    "Diciembre":arreglo[:,9]},index = indices)
+    "Noviembre":arreglo[:,10],
+    "Diciembre":arreglo[:,11]},index = indices)
     print(df.head())
 
 
+print(ingresos)
+imprimir(ingresos)
 print(egresos)
 imprimir(egresos)
