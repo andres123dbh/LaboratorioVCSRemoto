@@ -101,8 +101,26 @@ def semanas_consecutivas_temperatura (lista):
         if temperatura  == ((lista[len(lista)-1]*0.51)/(0.01716*8.3145)) - 273.15 and lista_supera:
             nueva_lista.append(lista_supera)
 
-    print("La nueva lista es:",nueva_lista)
+    return nueva_lista
 
+lista_2 = semanas_consecutivas_temperatura(presion_promedio)
 
+def desviacion_estandar_a_listas(lista):
+    media = 0
+    sumatoria = 0
+    numero_lista = 1
+    for i in range (0,len(lista)):
+        for a in lista[i]:
+            temperatura = (i*0.51)/(0.01716*8.3145)
+            media = media + (temperatura - 273.15)
+        media = media / len(lista)
+        for a in lista[i]:
+            temperatura = (a*0.51)/(0.01716*8.3145)
+            temperatura = temperatura - 273.15
+            diferencia = (temperatura - media)**2
+            sumatoria = sumatoria + diferencia
+        desviacion = (sumatoria/(len(lista)-1))**(1/2)
+        print("La desviación estándar en las mediciones de temperatura promedio semanal registradas durante la lista numero",numero_lista,"es",desviacion)
+        numero_lista +=1
 
-semanas_consecutivas_temperatura(presion_promedio)
+desviacion_estandar_a_listas(lista_2)
