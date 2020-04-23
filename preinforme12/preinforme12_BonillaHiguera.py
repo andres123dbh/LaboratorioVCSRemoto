@@ -6,7 +6,7 @@ def diferencia_mayor_menor(lista):
     print("La diferencia del mayor y el menor numero es: ",diferencia)
 
 def media_mediana(lista):
-    lista.sort() #.sort Ordena los ítems dela lista
+    lista.sort()
     if len(lista) % 2 == 0:
         mediana = (lista[int(len(lista) / 2)]+lista[int((len(lista) / 2)-1)])/2
     else:
@@ -20,4 +20,34 @@ def media_mediana(lista):
     print("porque la media tiene en cuenta todos los valores de la lista y la")
     print("mediana los dos o unico valor del centro")
 
-media_mediana(presion_promedio)
+def media(lista):
+    suma = 0
+    for i in lista:
+        suma = suma + i
+    media = suma / len(lista)
+    return media
+
+media = media(presion_promedio)
+
+def semanas_consecutivas (lista,media):
+    cont_mayores = 0
+    cont_menores = 0
+    nueva_lista = []
+    for i in lista:
+        if i < media:
+            cont_menores += 1
+        elif cont_menores != 0:
+            nueva_lista.append(["Semanas consecutivas por debajo de la media:",cont_menores])
+            cont_menores = 0
+        if i  == lista[len(lista)-1] and cont_menores != 0:
+            nueva_lista.append(["Semanas consecutivas por debajo de la media:",cont_menores])
+        if i > media:
+            cont_mayores += 1
+        elif cont_mayores != 0:
+            nueva_lista.append(["Semanas consecutivas que superan la media:",cont_mayores])
+            cont_mayores = 0
+        if i  == lista[len(lista)-1] and cont_mayores != 0:
+            nueva_lista.append(["Semanas consecutivas que superan la media:",cont_mayores])
+    print(nueva_lista)
+
+semanas_consecutivas (presion_promedio,media)
