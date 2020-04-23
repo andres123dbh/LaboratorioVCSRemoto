@@ -60,19 +60,25 @@ public class preinforme12L_BonillaAndres {
         presion_promedio.add(105.76);
         presion_promedio.add(107.85);
 
+
         double media = 0;
-        double suma = 0;
+        double sumatoria = 0;
+        double desviacion = 0;
+        double diferencia = 0;
         for (int i = 0;i< 52; i++){
-            suma = suma + presion_promedio.get(i);
-        media = suma / presion_promedio.size();
+            double temperatura = (presion_promedio.get(i)*0.51)/(0.01716*8.3145);
+            media = media + (temperatura - 273.15);
+            
         }
-        int semana = 1;
+        media = media / presion_promedio.size();
         for (int i = 0;i< 52; i++){
             double temperatura = (presion_promedio.get(i)*0.51)/(0.01716*8.3145);
             temperatura = temperatura - 273.15;
-            System.out.println("En la semana " + semana + " la temperatura promedio fue " + temperatura + " Celsius");
-            semana += 1;
+            diferencia = Math.pow((temperatura - media),2);
+            sumatoria = sumatoria + diferencia;
         }
+        desviacion = Math.sqrt((sumatoria/(presion_promedio.size()-1)));
+        System.out.println("La desviacion estandar de la temperatura del todo el año es " + desviacion);
     }    
 }
 
