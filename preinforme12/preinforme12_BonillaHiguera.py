@@ -120,7 +120,7 @@ def desviacion_estandar_a_listas(lista):
             diferencia = (temperatura - media)**2
             sumatoria = sumatoria + diferencia
         desviacion = (sumatoria/(len(lista)-1))**(1/2)
-        print("La desviación estándar en las mediciones de temperatura promedio semanal registradas durante la lista numero",numero_lista,"es",desviacion)
+        print("La desviación estándar en las mediciones de temperatura promedio semanal registradas durante la lista numero",numero_lista,"es de",desviacion)
         numero_lista +=1
 
 desviacion_estandar_a_listas(lista_2)
