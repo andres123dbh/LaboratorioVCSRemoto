@@ -71,4 +71,38 @@ def desviacion_estandar(lista):
     desviacion = (sumatoria/(len(lista)-1))**(1/2)
     print("La desviación estándar en las mediciones de temperatura promedio semanal registradas durante todo el año es",desviacion)
 
-desviacion_estandar(presion_promedio)
+def semanas_consecutivas_temperatura (lista):
+    suma = 0
+    semana = 1
+    nueva_lista = []
+    lista_supera = []
+    lista_bajo = []
+    for i in lista:
+        temperatura = (i*0.51)/(0.01716*8.3145)
+        suma = suma + (temperatura - 273.15)
+    media = suma / len(lista)
+    for i in lista:
+        temperatura = (i*0.51)/(0.01716*8.3145)
+        temperatura = temperatura - 273.15
+        if temperatura < media:
+            lista_bajo.append(semana)
+            semana += 1
+        elif lista_bajo:
+            nueva_lista.append(lista_bajo)
+            lista_bajo = []
+        if temperatura  == ((lista[len(lista)-1]*0.51)/(0.01716*8.3145)) - 273.15 and lista_bajo:
+            nueva_lista.append(lista_bajo)
+        if temperatura > media:
+            lista_supera.append(semana)
+            semana += 1
+        elif lista_supera:
+            nueva_lista.append(lista_supera)
+            lista_supera = []
+        if temperatura  == ((lista[len(lista)-1]*0.51)/(0.01716*8.3145)) - 273.15 and lista_supera:
+            nueva_lista.append(lista_supera)
+
+    print("La nueva lista es:",nueva_lista)
+
+
+
+semanas_consecutivas_temperatura(presion_promedio)
