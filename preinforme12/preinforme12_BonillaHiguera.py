@@ -5,4 +5,19 @@ def diferencia_mayor_menor(lista):
     diferencia = lista[-1] - lista[0]
     print("La diferencia del mayor y el menor numero es: ",diferencia)
 
-diferencia_mayor_menor(presion_promedio)
+def media_mediana(lista):
+    lista.sort() #.sort Ordena los ítems dela lista
+    if len(lista) % 2 == 0:
+        mediana = (lista[int(len(lista) / 2)]+lista[int((len(lista) / 2)-1)])/2
+    else:
+        mediana = lista[int(len(lista) / 2)]
+    suma = 0
+    for i in lista:
+        suma = suma + i
+    media = suma / len(lista)
+
+    print("La mediana es ",mediana," y la media ",media,". La diferencia es")
+    print("porque la media tiene en cuenta todos los valores de la lista y la")
+    print("mediana los dos o unico valor del centro")
+
+media_mediana(presion_promedio)
