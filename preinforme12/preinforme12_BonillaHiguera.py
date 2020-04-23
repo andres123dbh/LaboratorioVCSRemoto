@@ -52,7 +52,23 @@ def temperatura(lista):
     semana = 1
     for i in lista:
         temperatura = (i*0.51)/(0.01716*8.3145)
-        print("En la semana ",semana," la temperatura promedio fue ",temperatura," Kelvin")
+        temperatura = temperatura - 273.15
+        print("En la semana",semana,"la temperatura promedio fue",temperatura,"Celsius")
         semana += 1
 
-temperatura(presion_promedio)
+def desviacion_estandar(lista):
+    media = 0
+    sumatoria = 0
+    for i in lista:
+        temperatura = (i*0.51)/(0.01716*8.3145)
+        media = media + (temperatura - 273.15)
+    media = media / len(lista)
+    for i in lista:
+        temperatura = (i*0.51)/(0.01716*8.3145)
+        temperatura = temperatura - 273.15
+        diferencia = (temperatura - media)**2
+        sumatoria = sumatoria + diferencia
+    desviacion = (sumatoria/(len(lista)-1))**(1/2)
+    print("La desviación estándar en las mediciones de temperatura promedio semanal registradas durante todo el año es",desviacion)
+
+desviacion_estandar(presion_promedio)
