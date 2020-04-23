@@ -126,3 +126,36 @@ desviacion_estandar = desviacion_estandar(presion_promedio)
 
 print ("La media de la media de la desviacion estandar a cada listas es",media_desviacion,"y la desviacion estandar de todo es",desviacion_estandar)
 print ("Se diferencia porque en la primera se toman rangos por separado donde son superiores o por debajo \n de la media para sacar una desviacion estandar por cada lista que hay para al final calcular la media de \n estas desviaciones y en el segundo se toman en cuenta todos los datos para una unica desviacio estandar, \n por esto es que dan diferentes desviaciones")
+        double media = 0;
+        double suma = 0;
+        for (int i = 0;i< 52; i++){
+            suma = suma + presion_promedio.get(i);
+        media = suma / presion_promedio.size();
+        }
+        int cont_mayores = 0;
+        int cont_menores = 0;
+        ArrayList nueva_lista = new ArrayList<>();
+        for (int i = 0;i< 52; i++){
+            if (presion_promedio.get(i) < media){
+                cont_menores = cont_menores + 1;
+            }
+            else if(cont_menores != 0){
+                    nueva_lista.add(cont_menores);
+                    
+                    cont_menores = 0;
+            }
+            if (i == 51 && cont_menores !=0){
+                nueva_lista.add(cont_menores);
+            }
+            if (presion_promedio.get(i) > media){
+                cont_mayores = cont_mayores + 1;
+            }
+            else if(cont_mayores != 0){
+                    nueva_lista.add(cont_mayores);
+                    
+                    cont_mayores = 0;
+            }
+            if (i == 51 && cont_mayores !=0){
+                nueva_lista.add(cont_mayores);
+            }
+        }

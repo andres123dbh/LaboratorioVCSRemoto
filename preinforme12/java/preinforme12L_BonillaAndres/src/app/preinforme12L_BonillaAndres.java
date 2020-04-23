@@ -66,38 +66,13 @@ public class preinforme12L_BonillaAndres {
             suma = suma + presion_promedio.get(i);
         media = suma / presion_promedio.size();
         }
-        int cont_mayores = 0;
-        int cont_menores = 0;
-        ArrayList nueva_lista = new ArrayList<>();
+        int semana = 1;
         for (int i = 0;i< 52; i++){
-            if (presion_promedio.get(i) < media){
-                cont_menores = cont_menores + 1;
-            }
-            else if(cont_menores != 0){
-
-                    nueva_lista.add(cont_menores);
-                    
-                    cont_menores = 0;
-            }
-            if (i == 51 && cont_menores !=0){
-                nueva_lista.add(cont_menores);
-            }
-            if (presion_promedio.get(i) > media){
-                cont_mayores = cont_mayores + 1;
-            }
-            else if(cont_mayores != 0){
-
-                    nueva_lista.add(cont_mayores);
-                    
-                    cont_mayores = 0;
-            }
-            if (i == 51 && cont_mayores !=0){
-                nueva_lista.add(cont_mayores);
-            }
-
+            double temperatura = (presion_promedio.get(i)*0.51)/(0.01716*8.3145);
+            temperatura = temperatura - 273.15;
+            System.out.println("En la semana " + semana + " la temperatura promedio fue " + temperatura + " Celsius");
+            semana += 1;
         }
-        System.out.println(nueva_lista);
-
     }    
 }
 
