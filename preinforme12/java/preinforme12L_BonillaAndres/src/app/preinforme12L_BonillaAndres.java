@@ -1,10 +1,9 @@
 package app;
 import java.util.ArrayList;
-import java.util.List;
 
 public class preinforme12L_BonillaAndres {
     public static void main(String[] args) throws Exception {
-        List<Double> presion_promedio = new ArrayList<>();
+        ArrayList<Double> presion_promedio = new ArrayList<>();
         presion_promedio.add(110.06);
         presion_promedio.add(107.89);
         presion_promedio.add(108.45);
@@ -57,7 +56,23 @@ public class preinforme12L_BonillaAndres {
         presion_promedio.add(107.73);
         presion_promedio.add(105.76);
         presion_promedio.add(107.85);
-        
-        System.out.println(presion_promedio.size());
+
+        double mayor = 0;
+        double menor = 0;
+        for (int i = 0;i< 52; i++){
+            if(i == 0){
+                mayor = presion_promedio.get(i);
+                menor = presion_promedio.get(i);
+            }
+            if (presion_promedio.get(i) < menor){
+                menor = presion_promedio.get(i);
+            }
+            if (presion_promedio.get(i) > mayor){
+                mayor = presion_promedio.get(i);
+            }
+        }
+        double diferencia = mayor - menor;
+        System.out.println("La diferencia del mayor y menor promedio es " + diferencia);
     }
 }
+
