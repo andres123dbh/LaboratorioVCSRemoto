@@ -27,8 +27,6 @@ def media(lista):
     media = suma / len(lista)
     return media
 
-media = media(presion_promedio)
-
 def semanas_consecutivas (lista,media):
     cont_mayores = 0
     cont_menores = 0
@@ -50,4 +48,11 @@ def semanas_consecutivas (lista,media):
             nueva_lista.append(["Semanas consecutivas que superan la media:",cont_mayores])
     print(nueva_lista)
 
-semanas_consecutivas (presion_promedio,media)
+def temperatura(lista):
+    semana = 1
+    for i in lista:
+        temperatura = (i*0.51)/(0.01716*8.3145)
+        print("En la semana ",semana," la temperatura promedio fue ",temperatura," Kelvin")
+        semana += 1
+
+temperatura(presion_promedio)
