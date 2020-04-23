@@ -60,23 +60,44 @@ public class preinforme12L_BonillaAndres {
         presion_promedio.add(105.76);
         presion_promedio.add(107.85);
 
-        Collections.sort(presion_promedio);
-        double mediana = 0;
         double media = 0;
-        if (presion_promedio.size() % 2 == 0){
-        mediana = (presion_promedio.get(presion_promedio.size() / 2)+presion_promedio.get(((presion_promedio.size() / 2)-1)))/2;
-        }
-        else{
-        mediana = presion_promedio.get(presion_promedio.size() / 2);
-        }
         double suma = 0;
         for (int i = 0;i< 52; i++){
             suma = suma + presion_promedio.get(i);
         media = suma / presion_promedio.size();
         }
-        System.out.println("La mediana es " + mediana + " y la media "+ media +". La diferencia es");
-        System.out.println("porque la media tiene en cuenta todos los valores de la lista y la");
-        System.out.println("mediana los dos o unico valor del centro");
+        int cont_mayores = 0;
+        int cont_menores = 0;
+        ArrayList nueva_lista = new ArrayList<>();
+        for (int i = 0;i< 52; i++){
+            if (presion_promedio.get(i) < media){
+                cont_menores = cont_menores + 1;
+            }
+            else if(cont_menores != 0){
+
+                    nueva_lista.add(cont_menores);
+                    
+                    cont_menores = 0;
+            }
+            if (i == 51 && cont_menores !=0){
+                nueva_lista.add(cont_menores);
+            }
+            if (presion_promedio.get(i) > media){
+                cont_mayores = cont_mayores + 1;
+            }
+            else if(cont_mayores != 0){
+
+                    nueva_lista.add(cont_mayores);
+                    
+                    cont_mayores = 0;
+            }
+            if (i == 51 && cont_mayores !=0){
+                nueva_lista.add(cont_mayores);
+            }
+
+        }
+        System.out.println(nueva_lista);
+
     }    
 }
 
