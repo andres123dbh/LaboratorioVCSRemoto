@@ -69,7 +69,7 @@ def desviacion_estandar(lista):
         diferencia = (temperatura - media)**2
         sumatoria = sumatoria + diferencia
     desviacion = (sumatoria/(len(lista)-1))**(1/2)
-    print("La desviación estándar en las mediciones de temperatura promedio semanal registradas durante todo el año es",desviacion)
+    return desviacion
 
 def semanas_consecutivas_temperatura (lista):
     suma = 0
@@ -108,10 +108,10 @@ lista_2 = semanas_consecutivas_temperatura(presion_promedio)
 def desviacion_estandar_a_listas(lista):
     media = 0
     sumatoria = 0
-    numero_lista = 1
+    suma_desviacion = 0
     for i in range (0,len(lista)):
         for a in lista[i]:
-            temperatura = (i*0.51)/(0.01716*8.3145)
+            temperatura = (a*0.51)/(0.01716*8.3145)
             media = media + (temperatura - 273.15)
         media = media / len(lista)
         for a in lista[i]:
@@ -119,8 +119,13 @@ def desviacion_estandar_a_listas(lista):
             temperatura = temperatura - 273.15
             diferencia = (temperatura - media)**2
             sumatoria = sumatoria + diferencia
-        desviacion = (sumatoria/(len(lista)-1))**(1/2)
-        print("La desviación estándar en las mediciones de temperatura promedio semanal registradas durante la lista numero",numero_lista,"es de",desviacion)
-        numero_lista +=1
+        desviacion = (sumatoria/(len(lista[i])-1))**(1/2)
+        suma_desviacion = suma_desviacion + desviacion
+    media_desviacion = suma_desviacion / len(lista[i])
+    return media_desviacion
 
-desviacion_estandar_a_listas(lista_2)
+media_desviacion = desviacion_estandar_a_listas(lista_2)
+desviacion_estandar = desviacion_estandar(presion_promedio)
+
+print ("La media de la media de la desviacion estandar a cada listas es",media_desviacion,"y la desviacion estandar de todo es",desviacion_estandar)
+print ("Se diferencia porque en la primera se toman rangos por separado donde son superiores o por debajo \n de la media para sacar una desviacion estandar por cada lista que hay para al final calcular la media de \n estas desviaciones y en el segundo se toman en cuenta todos los datos para una unica desviacio estandar, \n por esto es que dan diferentes desviaciones")
