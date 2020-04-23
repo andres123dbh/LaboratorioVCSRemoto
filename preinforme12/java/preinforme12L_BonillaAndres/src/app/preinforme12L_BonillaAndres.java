@@ -1,5 +1,8 @@
 package app;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class preinforme12L_BonillaAndres {
     public static void main(String[] args) throws Exception {
@@ -57,22 +60,24 @@ public class preinforme12L_BonillaAndres {
         presion_promedio.add(105.76);
         presion_promedio.add(107.85);
 
-        double mayor = 0;
-        double menor = 0;
-        for (int i = 0;i< 52; i++){
-            if(i == 0){
-                mayor = presion_promedio.get(i);
-                menor = presion_promedio.get(i);
-            }
-            if (presion_promedio.get(i) < menor){
-                menor = presion_promedio.get(i);
-            }
-            if (presion_promedio.get(i) > mayor){
-                mayor = presion_promedio.get(i);
-            }
+        Collections.sort(presion_promedio);
+        double mediana = 0;
+        double media = 0;
+        if (presion_promedio.size() % 2 == 0){
+        mediana = (presion_promedio.get(presion_promedio.size() / 2)+presion_promedio.get(((presion_promedio.size() / 2)-1)))/2;
         }
-        double diferencia = mayor - menor;
-        System.out.println("La diferencia del mayor y menor promedio es " + diferencia);
-    }
+        else{
+        mediana = presion_promedio.get(presion_promedio.size() / 2);
+        }
+        double suma = 0;
+        for (int i = 0;i< 52; i++){
+            suma = suma + presion_promedio.get(i);
+        media = suma / presion_promedio.size();
+        }
+        System.out.println("La mediana es " + mediana + " y la media "+ media +". La diferencia es");
+        System.out.println("porque la media tiene en cuenta todos los valores de la lista y la");
+        System.out.println("mediana los dos o unico valor del centro");
+    }    
 }
+
 

@@ -12,9 +12,6 @@ def media_mediana(lista):
     else:
         mediana = lista[int(len(lista) / 2)]
     suma = 0
-    for i in lista:
-        suma = suma + i
-    media = suma / len(lista)
 
     print("La mediana es ",mediana," y la media ",media,". La diferencia es")
     print("porque la media tiene en cuenta todos los valores de la lista y la")
