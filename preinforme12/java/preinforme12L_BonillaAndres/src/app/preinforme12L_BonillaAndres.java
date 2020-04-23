@@ -78,7 +78,37 @@ public class preinforme12L_BonillaAndres {
             sumatoria = sumatoria + diferencia;
         }
         desviacion = Math.sqrt((sumatoria/(presion_promedio.size()-1)));
-        System.out.println("La desviacion estandar de la temperatura del todo el año es " + desviacion);
+        ArrayList nueva_lista = new ArrayList<>();
+        ArrayList lista_supera = new ArrayList<>();
+        ArrayList lista_bajo = new ArrayList<>();
+        int semana = 1;
+        for (int i = 0;i< 52; i++){
+            double temperatura = (presion_promedio.get(i)*0.51)/(0.01716*8.3145);
+            temperatura = temperatura - 273.15;
+            if (temperatura < media){
+                lista_bajo.add(semana);
+                semana += 1;
+            }
+            else if(lista_bajo.size() != 0){
+                    nueva_lista.add(lista_bajo);
+                    lista_bajo = new ArrayList<>();
+            }
+            if (i == 51 && lista_bajo.size() != 0){
+                nueva_lista.add(lista_bajo);
+            }
+            if (temperatura > media){
+                lista_supera.add(semana);
+                semana += 1;
+            }
+            else if(lista_supera.size() != 0){
+                    nueva_lista.add(lista_supera);
+                    lista_supera = new ArrayList<>();
+            }
+            if (i == 51 && lista_supera.size() != 0){
+                nueva_lista.add(lista_supera);
+            }
+        }
+        System.out.println(nueva_lista);
     }    
 }
 
