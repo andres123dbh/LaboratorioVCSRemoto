@@ -108,8 +108,38 @@ public class preinforme12L_BonillaAndres {
                 nueva_lista.add(lista_supera);
             }
         }
-        System.out.println(nueva_lista);
-    }    
-}
+        double suma_desviacion = 0;
+        double media_desviacion = 0;
+        for (int i = 0;i < nueva_lista.size()-1; i++){
+            List<Integer> copy = new ArrayList<>();
+            copy.addAll(nueva_lista);
+            for (int a = 0;a < 7; a++){
+                double temperatura = (presion_promedio.get(a)*0.51)/(0.01716*8.3145);
+            media = media + (temperatura - 273.15);
+            for (int e = 0;i< 7; i++){
+                temperatura = (presion_promedio.get(e)*0.51)/(0.01716*8.3145);
+                temperatura = temperatura - 273.15;
+                diferencia = Math.pow((temperatura - media),2);
+                sumatoria = sumatoria + diferencia;
+            }
+            desviacion = Math.sqrt((sumatoria/(7-1)));
+            media_desviacion = suma_desviacion / 7;
+            }
+            }
+            for (int a = 0;a < 12; a++){
+
+            }
+            for (int a = 0;a < 16; a++){
+
+            }
+            for (int a = 0;a < 5; a++){
+
+            }
+        }
+
+        }
+        
+        
+
 
 
