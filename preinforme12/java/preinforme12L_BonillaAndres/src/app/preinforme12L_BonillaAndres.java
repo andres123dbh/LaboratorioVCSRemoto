@@ -109,37 +109,75 @@ public class preinforme12L_BonillaAndres {
             }
         }
         double suma_desviacion = 0;
-        double media_desviacion = 0;
-        for (int i = 0;i < nueva_lista.size()-1; i++){
-            List<Integer> copy = new ArrayList<>();
-            copy.addAll(nueva_lista);
+        double media_desviacion_1 = 0;
+        double media_desviacion_2 = 0;
+        double media_desviacion_3 = 0;
+        double media_desviacion_4 = 0;
+        double media_desviacion_5 = 0;
+        double suma_desviacion_total = 0;
             for (int a = 0;a < 7; a++){
                 double temperatura = (presion_promedio.get(a)*0.51)/(0.01716*8.3145);
             media = media + (temperatura - 273.15);
-            for (int e = 0;i< 7; i++){
+            for (int e = 0;e< 7; e++){
                 temperatura = (presion_promedio.get(e)*0.51)/(0.01716*8.3145);
                 temperatura = temperatura - 273.15;
                 diferencia = Math.pow((temperatura - media),2);
                 sumatoria = sumatoria + diferencia;
             }
             desviacion = Math.sqrt((sumatoria/(7-1)));
-            media_desviacion = suma_desviacion / 7;
+            media_desviacion_1 = suma_desviacion / 7;
             }
+            
+            for (int a = 0;a < 12; a++){
+                double temperatura = (presion_promedio.get(a)*0.51)/(0.01716*8.3145);
+                media = media + (temperatura - 273.15);
+                for (int e = 0;e< 12; e++){
+                    temperatura = (presion_promedio.get(e)*0.51)/(0.01716*8.3145);
+                    temperatura = temperatura - 273.15;
+                    diferencia = Math.pow((temperatura - media),2);
+                    sumatoria = sumatoria + diferencia;
+                }
+                desviacion = Math.sqrt((sumatoria/(12-1)));
+                media_desviacion_2 = suma_desviacion / 12;
             }
             for (int a = 0;a < 12; a++){
-
+                double temperatura = (presion_promedio.get(a)*0.51)/(0.01716*8.3145);
+                media = media + (temperatura - 273.15);
+                for (int e = 0;e< 12; e++){
+                    temperatura = (presion_promedio.get(e)*0.51)/(0.01716*8.3145);
+                    temperatura = temperatura - 273.15;
+                    diferencia = Math.pow((temperatura - media),2);
+                    sumatoria = sumatoria + diferencia;
+                }
+                desviacion = Math.sqrt((sumatoria/(12-1)));
+                media_desviacion_3 = suma_desviacion / 12;
             }
             for (int a = 0;a < 16; a++){
-
+                double temperatura = (presion_promedio.get(a)*0.51)/(0.01716*8.3145);
+                media = media + (temperatura - 273.15);
+                for (int e = 0;e< 16; e++){
+                    temperatura = (presion_promedio.get(e)*0.51)/(0.01716*8.3145);
+                    temperatura = temperatura - 273.15;
+                    diferencia = Math.pow((temperatura - media),2);
+                    sumatoria = sumatoria + diferencia;
+                }
+                desviacion = Math.sqrt((sumatoria/(16-1)));
+                media_desviacion_4 = suma_desviacion / 16;
             }
             for (int a = 0;a < 5; a++){
-
+                double temperatura = (presion_promedio.get(a)*0.51)/(0.01716*8.3145);
+                media = media + (temperatura - 273.15);
+                for (int e = 0;e< 5; e++){
+                    temperatura = (presion_promedio.get(e)*0.51)/(0.01716*8.3145);
+                    temperatura = temperatura - 273.15;
+                    diferencia = Math.pow((temperatura - media),2);
+                    sumatoria = sumatoria + diferencia;
+                }
+                desviacion = Math.sqrt((sumatoria/(5-1)));
+                media_desviacion_5 = suma_desviacion / 5;
             }
-        }
-
-        }
-        
-        
-
-
-
+            suma_desviacion_total = (media_desviacion_1 + media_desviacion_2 + media_desviacion_3 + media_desviacion_4 + media_desviacion_5);
+            System.out.println("La media de la media de la desviacion estandar a cada listas es " + suma_desviacion_total + " y la desviacion estandar de todo es " + desviacion);
+            System.out.println ("Se diferencia porque en la primera se toman rangos por separado donde son superiores o por debajo \n de la media para sacar una desviacion estandar por cada lista que hay para al final calcular la media de \n estas desviaciones y en el segundo se toman en cuenta todos los datos para una unica desviacio estandar, \n por esto es que dan diferentes desviaciones");
+    }
+}
