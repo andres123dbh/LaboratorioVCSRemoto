@@ -4,8 +4,6 @@ cartas =  ["Payne","Hendrix","Stone","Coffey" , "Whitaker" , "Pope" , "Bleach" ,
 
 premium = ["AIVLIS", "LEIRBAG", "NAILUJ", "SOLRAC", "ANAID"]
 
-lista_prueba = [1,2,3,4,5,6,7,8,9,10]
-
 def imprimir(lista):
     print("La lista tiene",len(lista),"elementos")
     print("Los cuales son:",lista)
@@ -28,5 +26,17 @@ def generador(lista_a,n):
         return None
 
 jugador = generador(cartas,10)
-print(jugador)
+
+def combinador(lista_a,lista_b):
+    lista_r = []
+    for i in lista_a:
+        lista_r.append(i)
+    for i in lista_b:
+        lista_r.append(i)
+    return lista_r
+
+lista_prueba1 = [1,2,3,4,5,6,7,8,9,10] 
+lista_prueba2 = [11,12,13,14,15,16,17]
+lista_r = combinador(lista_prueba1,lista_prueba2)
+print(lista_r)
 
