@@ -33,9 +33,12 @@ def combinador(lista_a,lista_b):
         lista_r.append(i)
     return lista_r
 
-lista_prueba1 = [1,2,3,4,5,6,7,8,9,10] 
-lista_prueba2 = [11,12,13,14,15,16,17]
-
 juego = combinador(cartas,premium)
-print(juego)
 
+sobre_uno = generador(juego,5)
+sobre_dos = generador(juego,5)
+sobre_tres = generador(juego,5)
+
+print(sobre_uno)
+print(sobre_dos)
+print(sobre_tres)
