@@ -131,4 +131,4 @@ def imprimir_personalizado(arreglo,desde_mes,hasta_mes):
 
 
 
-imprimir_personalizado(ingresos,desde_mes,hasta_mes)
+imprimir(ingresos)
