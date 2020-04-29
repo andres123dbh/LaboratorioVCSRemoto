@@ -16,17 +16,17 @@ def generador(lista_a,n):
     contador = 0
     if n<=len(lista_a):
         while contador<n:
-            numero = random.randint(0,n)
+            numero = random.randint(0,len(lista_a)-1)
             if numero not in lista_numeros:
                 lista_numeros.append(numero)
                 contador+=1
         for i in lista_numeros:
                 lista_r.append(lista_a[i])
-        print(lista_r)
+        return lista_r
     else:
         print("La cantidad de elemendos que ingreso estan fuera del limite")
+        return None
 
-n = int(input("Ingrese la cantidad de elementos que desea: "))
-
-generador(lista_prueba,n)
+jugador = generador(cartas,10)
+print(jugador)
 
