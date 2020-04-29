@@ -25,8 +25,6 @@ def generador(lista_a,n):
         print("La cantidad de elemendos que ingreso estan fuera del limite")
         return None
 
-jugador = generador(cartas,10)
-
 def combinador(lista_a,lista_b):
     lista_r = []
     for i in lista_a:
@@ -37,6 +35,7 @@ def combinador(lista_a,lista_b):
 
 lista_prueba1 = [1,2,3,4,5,6,7,8,9,10] 
 lista_prueba2 = [11,12,13,14,15,16,17]
-lista_r = combinador(lista_prueba1,lista_prueba2)
-print(lista_r)
+
+juego = combinador(cartas,premium)
+print(juego)
 
