@@ -8,4 +8,7 @@ def imprimir (lista):
     print("La lista tiene",len(lista),"elementos")
     print("Los cuales son:",lista)
 
-imprimir(lista_prueba)
+print("La lista cartas:")
+imprimir(cartas)
+print("La lista premium:")
+imprimir(premium)
