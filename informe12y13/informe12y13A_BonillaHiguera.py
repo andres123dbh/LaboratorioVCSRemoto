@@ -25,6 +25,8 @@ def generador(lista_a,n):
         print("La cantidad de elemendos que ingreso estan fuera del limite")
         return None
 
+jugador = generador(cartas,10)
+
 def combinador(lista_a,lista_b):
     lista_r = []
     for i in lista_a:
@@ -39,10 +41,39 @@ sobre_uno = generador(juego,5)
 sobre_dos = generador(juego,5)
 sobre_tres = generador(juego,5)
 
-print(sobre_uno)
-print(sobre_dos)
-print(sobre_tres)
 antes_paquete = combinador(sobre_uno,sobre_dos)
-print(antes_paquete)
 paquete = combinador(antes_paquete,sobre_tres)
+
 print(paquete)
+def loteria (premium,paquete,jugador):
+    repetida = []
+    unico = []
+    carta_premium = []
+    for x in paquete:
+        if x not in unico:
+            unico.append(x)
+        else:
+            if x not in repetida:
+                repetida.append(x)
+    print(repetida)
+    for i in paquete:
+        for a in premium:
+            if i == a:
+                carta_premium.append(i)
+    print(carta_premium)
+    if repetida and len(carta_premium)<=1:
+        numero = random.randint(0,9)
+        if numero == 6:
+            print("Felizitaciones")
+            for i in jugador:
+                for a in premium:
+                    if i == a:
+                        carta_premium.append(i)
+            premium_no_repetidas = [carta for carta in premium if carta not in carta_premium]
+            numero_al = random.randint(0,len(premium_no_repetidas)-1)
+            if premium_no_repetidas:
+                paquete.append(premium_no_repetidas[numero_al])
+
+loteria(premium,paquete,jugador)
+print(paquete)
+print(jugador)
