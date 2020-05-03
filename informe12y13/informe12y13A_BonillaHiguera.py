@@ -183,6 +183,19 @@ def letras_seguidas(jugador):
             print("La letra '{}' aparece {} veces de manera consecutiva".format(letra,suma) )
         lista_cant = []
 
-lista_prueba = ["aabbbcaaadeaanaa","daadppapaa","aaaacc"]
-letras_seguidas(jugador)
+lista_prueba = ["ab","abc","abcd"]
+
+def cantidad_cada_letra(jugador):
+    contador_letra = 0
+    abecedario = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    for letra in abecedario:
+        for a in jugador:
+            for i in range(0,len(a)):
+                if letra == a[i]:
+                    contador_letra += 1
+        if contador_letra != 0:
+            print("La letra '{}' aparece un total de {} veces".format(letra,contador_letra))
+        contador_letra = 0
+
+cantidad_cada_letra(jugador)
 print(jugador)
