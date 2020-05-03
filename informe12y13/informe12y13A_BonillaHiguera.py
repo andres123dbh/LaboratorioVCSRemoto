@@ -173,5 +173,18 @@ def cuantas_empiezan(jugador):
     lista =  [ carta  for carta in jugador if "z" in carta[0] ]
     print("Empiezan",len(lista),"cartas con la letra 'z' y son",lista)
 
-cuantas_empiezan(jugador)
-print(jugador)
+def mayor_menor_longitud(jugador):
+    mayor = 0
+    menor = 0
+    for i in range(0,len(jugador)):
+        if i == 0:
+            mayor = jugador[i]
+            menor = jugador[i]
+        if len(jugador[i])>len(mayor):
+            mayor = jugador[i]
+        if len(jugador[i])<len(menor):
+            menor = jugador[i]
+    print("La carta con mayor longitud tiene",len(mayor),"palabras y es",mayor)
+    print("La carta con menor longitud tiene",len(menor),"palabras y es",menor)
+
+mayor_menor_longitud(jugador)
