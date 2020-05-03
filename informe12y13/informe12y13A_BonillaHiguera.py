@@ -187,4 +187,21 @@ def mayor_menor_longitud(jugador):
     print("La carta con mayor longitud tiene",len(mayor),"palabras y es",mayor)
     print("La carta con menor longitud tiene",len(menor),"palabras y es",menor)
 
-mayor_menor_longitud(jugador)
+def cuantas_empiezan_premium(jugador,premium):
+    cuantas_premium = []
+    for i in jugador:
+        for a in premium:
+                    if i == a:
+                        cuantas_premium.append(i)
+    if cuantas_premium:
+        lista =  [ carta[0]  for carta in cuantas_premium]
+        lista2 =  [ carta  for carta in jugador if carta[-1] in lista]
+        print(cuantas_premium)
+        print(lista)
+        print(jugador)
+        print(lista2)
+        print("Hay",len(lista2),"cartas que terminan con la letra con la que empieza la(s) cartas premium ")
+    else:
+        print("No tiene cartas premium")
+
+cuantas_empiezan_premium(jugador,premium)
