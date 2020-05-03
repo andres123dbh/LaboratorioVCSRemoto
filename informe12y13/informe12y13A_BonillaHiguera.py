@@ -44,7 +44,6 @@ sobre_tres = generador(juego,5)
 antes_paquete = combinador(sobre_uno,sobre_dos)
 paquete = combinador(antes_paquete,sobre_tres)
 
-print(paquete)
 def loteria (premium,paquete,jugador):
     repetida = []
     unico = []
@@ -55,12 +54,10 @@ def loteria (premium,paquete,jugador):
         else:
             if x not in repetida:
                 repetida.append(x)
-    print(repetida)
     for i in paquete:
         for a in premium:
             if i == a:
                 carta_premium.append(i)
-    print(carta_premium)
     if repetida and len(carta_premium)<=1:
         numero = random.randint(0,9)
         if numero == 6:
@@ -75,5 +72,7 @@ def loteria (premium,paquete,jugador):
                 paquete.append(premium_no_repetidas[numero_al])
 
 loteria(premium,paquete,jugador)
-print(paquete)
+for i in paquete:
+    jugador.append(i)
+
 print(jugador)
