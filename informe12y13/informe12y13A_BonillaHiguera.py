@@ -119,4 +119,59 @@ def cuantas_veces_aparece(jugador):
         contador = 0
     print(jugador)
 
-cuantas_veces_aparece(jugador)
+def cuantas_empiezan(jugador):
+    lista =  [ carta  for carta in jugador if "a" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'a' y son",lista)
+    lista =  [ carta  for carta in jugador if "b" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'b' y son",lista)
+    lista =  [ carta  for carta in jugador if "c" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'c' y son",lista)
+    lista =  [ carta  for carta in jugador if "d" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'd' y son",lista)
+    lista =  [ carta  for carta in jugador if "e" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'e' y son",lista)
+    lista =  [ carta  for carta in jugador if "f" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'f' y son",lista)
+    lista =  [ carta  for carta in jugador if "g" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'g' y son",lista)
+    lista =  [ carta  for carta in jugador if "h" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'h' y son",lista)
+    lista =  [ carta  for carta in jugador if "i" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'i' y son",lista)
+    lista =  [ carta  for carta in jugador if "j" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'j' y son",lista)
+    lista =  [ carta  for carta in jugador if "k" in carta[0] ]
+    print("Empiezan",len(lista),"cartas cartas con la letra 'k' y son",lista)
+    lista =  [ carta  for carta in jugador if "l" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'l' y son",lista)
+    lista =  [ carta  for carta in jugador if "m" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'm' y son",lista)
+    lista =  [ carta  for carta in jugador if "n" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'n' y son",lista)
+    lista =  [ carta  for carta in jugador if "o" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'o' y son",lista)
+    lista =  [ carta  for carta in jugador if "p" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'p' y son",lista)
+    lista =  [ carta  for carta in jugador if "q" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'q' y son",lista)
+    lista =  [ carta  for carta in jugador if "r" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'r' y son",lista)
+    lista =  [ carta  for carta in jugador if "s" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 's' y son",lista)
+    lista =  [ carta  for carta in jugador if "t" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 't' y son",lista)
+    lista =  [ carta  for carta in jugador if "u" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'u' y son",lista)
+    lista =  [ carta  for carta in jugador if "v" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'v' y son",lista)
+    lista =  [ carta  for carta in jugador if "w" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'w' y son",lista)
+    lista =  [ carta  for carta in jugador if "x" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'x' y son",lista)
+    lista =  [ carta  for carta in jugador if "y" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'y' y son",lista)
+    lista =  [ carta  for carta in jugador if "z" in carta[0] ]
+    print("Empiezan",len(lista),"cartas con la letra 'z' y son",lista)
+
+cuantas_empiezan(jugador)
+print(jugador)
