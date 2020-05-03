@@ -75,4 +75,20 @@ loteria(premium,paquete,jugador)
 for i in paquete:
     jugador.append(i)
 
+jugador = [carta.lower() for carta in jugador]
+premium = [carta.lower() for carta in premium]
+
+def cuantas_premium(jugador,premium):
+    cuantas_premium = []
+    for i in jugador:
+        for a in premium:
+                    if i == a:
+                        cuantas_premium.append(i)
+    if cuantas_premium:
+        print("El jugador si obtuvo cartas premium y son",cuantas_premium)
+    else:
+        print("No obtuvo cartas premium")
+
+cuantas_premium(jugador,premium)
 print(jugador)
+print(premium)
