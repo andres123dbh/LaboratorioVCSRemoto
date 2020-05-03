@@ -89,6 +89,17 @@ def cuantas_premium(jugador,premium):
     else:
         print("No obtuvo cartas premium")
 
-cuantas_premium(jugador,premium)
+def cuantas_repetidas(jugador):
+    repetida = []
+    unico = []
+    for x in jugador:
+        if x not in unico:
+            unico.append(x)
+        else:
+            if x not in repetida:
+                repetida.append(x)
+    print("Tiene",len(repetida),"cartas repetidas")
+    print(repetida)
+
+cuantas_repetidas(jugador)
 print(jugador)
-print(premium)
