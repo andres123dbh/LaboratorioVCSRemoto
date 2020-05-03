@@ -101,5 +101,22 @@ def cuantas_repetidas(jugador):
     print("Tiene",len(repetida),"cartas repetidas")
     print(repetida)
 
-cuantas_repetidas(jugador)
-print(jugador)
+def cuantas_veces_aparece(jugador):
+    contador = 0
+    repetida = []
+    unico = []
+    for x in jugador:
+        if x not in unico:
+            unico.append(x)
+        else:
+            if x not in repetida:
+                repetida.append(x)
+    for i in range(0,len(unico)):
+        for a in jugador:
+            if unico[i] == a:
+                contador += 1
+        print("La carta",jugador[i],"aparece",contador,"veces")
+        contador = 0
+    print(jugador)
+
+cuantas_veces_aparece(jugador)
