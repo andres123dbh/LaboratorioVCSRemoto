@@ -24,4 +24,6 @@ def revolver(baraja):
 
 baraja = revolver(baraja)
 
-print(baraja)
+cartas_jugador = []
+cartas_tallador = []
+
