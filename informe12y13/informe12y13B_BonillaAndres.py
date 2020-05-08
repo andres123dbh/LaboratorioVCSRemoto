@@ -48,7 +48,6 @@ def repartir(baraja,cartas_repartir,lista_baraja):
 
 
 cartas_jugador, lista_baraja = repartir(baraja,cartas_jugador,lista_baraja)
-cartas_tallador, lista_baraja = repartir(baraja,cartas_tallador,lista_baraja)
 
 def sumar_cartas(lista_cartas,baraja):
     suma = 0
@@ -70,7 +69,7 @@ def sumar_cartas(lista_cartas,baraja):
         return mensaje
     else:
         return suma
-suma = 0
+
 resultado = sumar_cartas(cartas_jugador,baraja)
 
 def mostrar(lista_cartas,baraja):
@@ -87,6 +86,7 @@ def mostrar(lista_cartas,baraja):
             suma = suma + baraja[i]
     print("Sus cartas son:",lista_cartas)
     print("La suma de su cartas es:",suma)
+    return suma
 
 mostrar(cartas_jugador,baraja)
 
@@ -108,4 +108,43 @@ elif isinstance(resultado, int):
             else:
                 print("No registro una opcion valida")
                 juega = int(input("Si desea mas cartas escriba 1 de lo contrario 2: "))
+
+print("El jugador quedo con:")
+mostrar(cartas_jugador,baraja)
+print("Turno del tallador")
+if isinstance(resultado, str):
+    print("El tallador no juega porque al jugador le salio el mensaje:")
+    print(resultado)
+else:
+    cartas_tallador, lista_baraja = repartir(baraja,cartas_tallador,lista_baraja)
+    resultado2 = sumar_cartas(cartas_tallador,baraja)
+    mostrar(cartas_tallador,baraja)
+    while resultado2 < 21:
+        if resultado2 <= resultado: 
+            cartas_tallador, lista_baraja = repartir(baraja,cartas_tallador,lista_baraja)
+            resultado2 = sumar_cartas(cartas_tallador,baraja)
+            mostrar(cartas_tallador,baraja)
+            if isinstance(resultado2, str):
+                        print(resultado2)
+                        break
+        elif resultado2 > resultado:
+            print("Gano el tallador con:")
+            mostrar(cartas_tallador,baraja)
+            break
+
+print("Recuento final del juego")
+print("")
+print("El jugador quedo con:")
+jugador = mostrar(cartas_jugador,baraja)
+print("El tallador quedo con:")
+tallador = mostrar(cartas_tallador,baraja)
+
+if jugador > tallador and jugador <= 21:
+    print("Gano el jugador")
+elif tallador > jugador and tallador <= 21:
+    print("Gano el tallador")
+elif jugador > tallador and jugador > 21:
+    print("Gano el tallador")
+elif tallador > jugador and tallador > 21:
+    print("Gano el jugador")
 
