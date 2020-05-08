@@ -73,6 +73,23 @@ def sumar_cartas(lista_cartas,baraja):
 suma = 0
 resultado = sumar_cartas(cartas_jugador,baraja)
 
+def mostrar(lista_cartas,baraja):
+    suma = 0
+    for i in lista_cartas:
+        suma = suma + baraja[i]
+    if suma <= 10:
+        baraja["♥(C)A"] = 11
+        baraja["♦(D)A"] = 11
+        baraja["♣(T)A"] = 11
+        baraja["♠(P)A"] = 11
+        suma = 0
+        for i in lista_cartas:
+            suma = suma + baraja[i]
+    print("Sus cartas son:",lista_cartas)
+    print("La suma de su cartas es:",suma)
+
+mostrar(cartas_jugador,baraja)
+
 if isinstance(resultado, str):
     print(resultado)
 elif isinstance(resultado, int):
@@ -82,6 +99,7 @@ elif isinstance(resultado, int):
             if juega == 1:
                 cartas_jugador, lista_baraja = repartir(baraja,cartas_jugador,lista_baraja)
                 resultado = sumar_cartas(cartas_jugador,baraja)
+                mostrar(cartas_jugador,baraja)
                 if isinstance(resultado, str):
                     print(resultado)
                     break
@@ -90,3 +108,4 @@ elif isinstance(resultado, int):
             else:
                 print("No registro una opcion valida")
                 juega = int(input("Si desea mas cartas escriba 1 de lo contrario 2: "))
+
